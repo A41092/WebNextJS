@@ -6,7 +6,7 @@ import ArrangeFiter from "../layouts/arrangefilter";
 import Image from "next/image";
 import SetActiveForm from "../layouts/setActiveForm";
 
-const Lopoto = () => {
+export default function Acquy() {
   // Danh sách sản phẩm đầy đủ
   const products = [
     {
@@ -149,7 +149,7 @@ const Lopoto = () => {
       
       <div className="w-11/12  mx-auto h-auto rounded-lg container flex mb-5 gap-2">
         {/* Sidebar */}
-        <SetActiveForm title="Tìm kiếm lốp ô tô " title2="Theo kích cỡ"/>
+        <SetActiveForm title="Tìm kiếm Ắc quy" title2="Theo tên"/>
 
         {/* Nội dung chính */}
         <div className="flex flex-col gap-6 flex-1 mt-5 mb-5  font-medium rounded-r-lg">
@@ -247,4 +247,4 @@ const Lopoto = () => {
   );
 };
 
-export default Lopoto;
+ 

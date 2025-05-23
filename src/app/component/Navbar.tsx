@@ -5,7 +5,7 @@ import MobileMenu from "./MobileMenu"; // Import Client Component
 export default function Navbar() {
   return (
     <div className="w-11/12 mx-auto shadow-md mb-5">
-      <nav className="bg-blue-800 text-white rounded-lg">
+      <nav className="bg-rose-700 text-white rounded-lg">
         <div className="container mx-auto flex justify-between items-center px-6 py-2">
           {/* Mobile Menu Button (Client Component) */}
           <MobileMenu />
@@ -23,7 +23,7 @@ export default function Navbar() {
               { path: "/tintuc", label: "TIN TỨC" },
             ].map((item) => (
               <li key={item.path} className="relative group mt-2">
-                <Link href={item.path} className="hover:text-gray-300">{item.label}</Link>
+                <Link href={item.path} className="hover:text-gray-800">{item.label}</Link>
               </li>
             ))}
           </ul>

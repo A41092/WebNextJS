@@ -3,14 +3,14 @@ import React, { useState } from "react";
 import { TextField, Autocomplete } from "@mui/material";
 
 const optionsSize1 = [
-  "155","165","175","185","195","205","215","225","235","245","255","265","275","285","295","305"
+  "40AH","45AH","50AH","55AH","60AH","65AH","70AH","75AH","80AH","90AH","100AH"
 ];
 const optionsSize2 = [
-  "50","55","60","65","70","75","80"
+  "AtlatBX","GS","DongNai","Rocket","Enimac","Amaron","Avarta"
 ];
-const optionsSize3 = [
-  "R13","R14","R15","R16","R17","R18","R19","R20","R21","R22"
-];
+// const optionsSize3 = [
+//   "R13","R14","R15","R16","R17","R18","R19","R20","R21","R22"
+// ];
 export default function SeachSizeTire() {
   const [value1, setValue1] = useState(null);
   const [value2, setValue2] = useState(null);
@@ -27,7 +27,7 @@ export default function SeachSizeTire() {
           renderInput={(params) => (
             <TextField
               {...params}
-              label="Chiều rộng"
+              label="Dung lượng"
               variant="outlined"
             />
           )}
@@ -40,13 +40,13 @@ export default function SeachSizeTire() {
           renderInput={(params) => (
             <TextField
               {...params}
-              label="Chiều cao"
+              label="Hãng"
               variant="outlined"
             />
           )}
           size="small"
         />
-        <Autocomplete
+        {/* <Autocomplete
           options={optionsSize3} // Danh sách gợi ý
           value={value3} // Giá trị đã chọn
           onChange={(event, newValue3) => setValue3(newValue3)} // Cập nhật giá trị
@@ -58,7 +58,7 @@ export default function SeachSizeTire() {
             />
           )}
           size="small"
-        />
+        /> */}
       </form>
     </>
   );

@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
-import AutoCompleteTireBrand from "../layouts/tirebrandfilter";
-import AutoCompleteTireType from "../layouts/tiretypefilter";
-import ArrangeFiter from "../layouts/arrangefilter";
+// import AutoCompleteTireBrand from "./tirebrandfilter";
+// import AutoCompleteTireType from "./tiretypefilter";
+import ArrangeFiter from "./arrangefilter";
 import Image from "next/image";
-import SetActiveForm from "../layouts/setActiveForm";
+import SetActiveForm from "./setActiveForm";
 
-const Lopoto = () => {
+export default function Acquy() {
   // Danh sách sản phẩm đầy đủ
   const products = [
     {
@@ -149,14 +149,14 @@ const Lopoto = () => {
       
       <div className="w-11/12  mx-auto h-auto rounded-lg container flex mb-5 gap-2">
         {/* Sidebar */}
-        <SetActiveForm title="Tìm kiếm lốp ô tô " title2="Theo kích cỡ"/>
+        <SetActiveForm />
 
         {/* Nội dung chính */}
         <div className="flex flex-col gap-6 flex-1 mt-5 mb-5  font-medium rounded-r-lg">
           <div className="h-14 flex border-1 border-gray-200 rounded-lg">
             <div className="w-3/4 flex gap-5 ml-5">
-              <AutoCompleteTireBrand />
-              <AutoCompleteTireType />
+              {/* <AutoCompleteTireBrand /> */}
+              {/* <AutoCompleteTireType /> */}
             </div>
             <div className="w-1/4 ml-5">
               <ArrangeFiter />
@@ -247,4 +247,4 @@ const Lopoto = () => {
   );
 };
 
-export default Lopoto;
+ 

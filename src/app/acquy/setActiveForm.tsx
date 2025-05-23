@@ -1,10 +1,10 @@
 "use client";
 import SeachTypeCar from "./seachtypecar";
 import { FaFilter } from "react-icons/fa";
-import SeachSizeTire from "./seachsize";
+import SeachBattery from "./seachsize";
 import { useState } from "react";
-export default function SetActiveForm({ title = "" , title2=""}) {
-  const [ActiveForm, setActiveForm] = useState(() => SeachSizeTire);
+export default function SetActiveForm() {
+  const [ActiveForm, setActiveForm] = useState(() => SeachBattery);
   const [Boderbtn1, setBoderbtn1] = useState(true);
   const [Boderbtn2, setBoderbtn2] = useState(false);
   return (
@@ -12,13 +12,13 @@ export default function SetActiveForm({ title = "" , title2=""}) {
       <div className=" hidden md:flex flex-col w-1/5 mt-5 font-semibold ">
         <h2 className="text-xl font-semibold text-center rounded-xl h-11 flex items-center justify-center">
           <FaFilter className=" mr-3" />
-          {title}
+          Tìm kiếm Ắc quy
         </h2>
         <hr className="border-1 border-gray-500 my-3" />
         <div className="flex gap-1  ">
           <button
             onClick={() => {
-              setActiveForm(() => SeachSizeTire);
+              setActiveForm(() => SeachBattery);
               // click vào btn1 thêm boder btn1 và bỏ boderbtn2
               if (Boderbtn1 == true) {
                 setBoderbtn2(false);
@@ -34,7 +34,7 @@ export default function SetActiveForm({ title = "" , title2=""}) {
                 : "size-10 font-semibold text-center w-1/2 "
             }`}
           >
-            {title2}
+            Ắc quy
           </button>
 
           <button
